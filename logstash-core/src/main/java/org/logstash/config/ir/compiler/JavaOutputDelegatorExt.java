@@ -53,6 +53,8 @@ public final class JavaOutputDelegatorExt extends AbstractOutputDelegatorExt {
 
     private transient Runnable registerAction;
 
+    private transient Runnable wtfHandleTraceAction;
+
     private transient Output output;
 
     public JavaOutputDelegatorExt(final Ruby runtime, final RubyClass metaClass) {
@@ -62,7 +64,7 @@ public final class JavaOutputDelegatorExt extends AbstractOutputDelegatorExt {
     public static JavaOutputDelegatorExt create(final String configName, final String id,
         final AbstractMetricExt metric,
         final Consumer<Collection<JrubyEventExtLibrary.RubyEvent>> outputFunction,
-        final Runnable closeAction, final Runnable registerAction) {
+        final Runnable closeAction, final Runnable registerAction, final Runnable wtfHandleTraceAction) {
         final JavaOutputDelegatorExt instance =
             new JavaOutputDelegatorExt(RubyUtil.RUBY, RubyUtil.JAVA_OUTPUT_DELEGATOR_CLASS);
         instance.configName = RubyUtil.RUBY.newString(configName);
@@ -70,6 +72,7 @@ public final class JavaOutputDelegatorExt extends AbstractOutputDelegatorExt {
         instance.outputFunction = outputFunction;
         instance.closeAction = closeAction;
         instance.registerAction = registerAction;
+        instance.wtfHandleTraceAction = wtfHandleTraceAction;
         return instance;
     }
 
@@ -84,6 +87,7 @@ public final class JavaOutputDelegatorExt extends AbstractOutputDelegatorExt {
         instance.outputFunction = instance::outputRubyEvents;
         instance.closeAction = instance::outputClose;
         instance.registerAction = instance::outputRegister;
+        instance.wtfHandleTraceAction = instance::outputWtfHandleTrace;
         return instance;
     }
 
@@ -97,6 +101,10 @@ public final class JavaOutputDelegatorExt extends AbstractOutputDelegatorExt {
     }
 
     void outputRegister() {
+
+    }
+
+    void outputWtfHandleTrace() {
 
     }
 
@@ -123,6 +131,11 @@ public final class JavaOutputDelegatorExt extends AbstractOutputDelegatorExt {
     @Override
     protected void doRegister(final ThreadContext context) {
         registerAction.run();
+    }
+
+    @Override
+    protected void doWTFHandleTrace(final ThreadContext context) {
+        wtfHandleTraceAction.run();
     }
 
     @Override

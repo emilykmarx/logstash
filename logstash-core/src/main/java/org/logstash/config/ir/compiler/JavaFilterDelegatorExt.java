@@ -91,6 +91,10 @@ public class JavaFilterDelegatorExt extends AbstractFilterDelegatorExt {
     }
 
     @Override
+    protected void doWTFHandleTrace(ThreadContext context) {
+    }
+
+    @Override
     protected IRubyObject doFlush(final ThreadContext context, final RubyHash options) {
         if (filter.requiresFlush()) {
             Collection<Event> outputEvents = filter.flush(filterMatchListener);

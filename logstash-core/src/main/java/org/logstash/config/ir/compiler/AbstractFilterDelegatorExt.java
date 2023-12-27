@@ -76,7 +76,15 @@ public abstract class AbstractFilterDelegatorExt extends RubyObject {
         return context.nil;
     }
 
+    @JRubyMethod
+    public IRubyObject wtf_handle_trace(final ThreadContext context) {
+        doWTFHandleTrace(context);
+        return context.nil;
+    }
+
     protected abstract void doRegister(final ThreadContext context);
+
+    protected abstract void doWTFHandleTrace(final ThreadContext context);
 
     @JRubyMethod
     public IRubyObject close(final ThreadContext context) {

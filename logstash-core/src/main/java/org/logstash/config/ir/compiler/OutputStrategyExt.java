@@ -94,6 +94,12 @@ public final class OutputStrategyExt {
             return map.op_aset(context, type, klass);
         }
 
+        @JRubyMethod
+        public IRubyObject wtf_handle_trace(final ThreadContext context, final IRubyObject type,
+            final IRubyObject klass) {
+            return map.op_aset(context, type, klass);
+        }
+
         @JRubyMethod(name = "class_for")
         @SuppressWarnings("unchecked")
         public RubyClass classFor(final ThreadContext context, final IRubyObject type) {
@@ -131,6 +137,12 @@ public final class OutputStrategyExt {
             return reg(context);
         }
 
+        @JRubyMethod
+        @SuppressWarnings("unchecked")
+        public final IRubyObject wtf_handle_trace(final ThreadContext context) {
+            return wtf_handle_tra(context);
+        }
+
         @JRubyMethod(name = "do_close")
         @SuppressWarnings("unchecked")
         public final IRubyObject doClose(final ThreadContext context) {
@@ -162,6 +174,8 @@ public final class OutputStrategyExt {
         protected abstract IRubyObject close(ThreadContext context);
 
         protected abstract IRubyObject reg(ThreadContext context);
+
+        protected abstract IRubyObject wtf_handle_tra(ThreadContext context);
     }
 
     @JRubyClass(name = "Legacy", parent = "AbstractStrategy")
@@ -236,6 +250,13 @@ public final class OutputStrategyExt {
             workers.forEach(worker -> ((IRubyObject) worker).callMethod(context, "register"));
             return this;
         }
+
+        @Override
+        @SuppressWarnings("unchecked")
+        protected IRubyObject wtf_handle_tra(final ThreadContext context) {
+            workers.forEach(worker -> ((IRubyObject) worker).callMethod(context, "wtf_handle_trace"));
+            return this;
+        }
     }
 
     @JRubyClass(name = "SimpleAbstractStrategy", parent = "AbstractStrategy")
@@ -273,6 +294,11 @@ public final class OutputStrategyExt {
         @Override
         protected final IRubyObject reg(final ThreadContext context) {
             return output.callMethod(context, "register");
+        }
+
+        @Override
+        protected final IRubyObject wtf_handle_tra(final ThreadContext context) {
+            return output.callMethod(context, "wtf_handle_trace");
         }
 
         protected final IRubyObject doOutput(final ThreadContext context, final IRubyObject events) {

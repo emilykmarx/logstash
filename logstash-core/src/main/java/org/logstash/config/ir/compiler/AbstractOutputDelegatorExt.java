@@ -70,6 +70,12 @@ public abstract class AbstractOutputDelegatorExt extends RubyObject {
         return context.nil;
     }
 
+    @JRubyMethod
+    public IRubyObject wtf_handle_trace(final ThreadContext context) {
+        doWTFHandleTrace(context);
+        return context.nil;
+    }
+
     @JRubyMethod(name = "do_close")
     public IRubyObject doClose(final ThreadContext context) {
         close(context);
@@ -146,6 +152,8 @@ public abstract class AbstractOutputDelegatorExt extends RubyObject {
     protected abstract void close(ThreadContext context);
 
     protected abstract void doRegister(ThreadContext context);
+
+    protected abstract void doWTFHandleTrace(ThreadContext context);
 
     protected abstract IRubyObject reloadable(ThreadContext context);
 }

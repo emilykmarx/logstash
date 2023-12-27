@@ -90,6 +90,11 @@ public final class FilterDelegatorExt extends AbstractFilterDelegatorExt {
     }
 
     @Override
+    protected void doWTFHandleTrace(final ThreadContext context) {
+        filter.callMethod(context, "wtf_handle_trace");
+    }
+
+    @Override
     protected IRubyObject closeImpl(final ThreadContext context) {
         return filter.callMethod(context, "close");
     }

@@ -127,6 +127,11 @@ public final class OutputDelegatorExt extends AbstractOutputDelegatorExt {
     }
 
     @Override
+    protected void doWTFHandleTrace(final ThreadContext context) {
+        strategy.wtf_handle_trace(context);
+    }
+
+    @Override
     protected IRubyObject reloadable(final ThreadContext context) {
         return outputClass.callMethod(context, "reloadable?");
     }

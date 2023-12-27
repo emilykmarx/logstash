@@ -92,6 +92,11 @@ class LogStash::Outputs::Base < LogStash::Plugin
   end # def register
 
   public
+  def wtf_handle_trace
+    @logger.warn("Plugin #{self.class.name} does not support WTF trace handling method")
+  end # def wtf_handle_trace
+
+  public
   def receive(event)
     raise "#{self.class}#receive must be overidden"
   end # def receive
