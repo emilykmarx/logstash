@@ -1,30 +1,30 @@
 {
   "logstash-codec-avro": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-cef": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-collectd": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-dots": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-edn": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-edn_lines": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-es_bulk": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-example": {
@@ -32,11 +32,11 @@
     "skip-list": true
   },
   "logstash-codec-fluent": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-graphite": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-java_codec_example": {
@@ -44,83 +44,83 @@
     "skip-list": true
   },
   "logstash-codec-json": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-json_lines": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-line": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-msgpack": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-multiline": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-netflow": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-codec-plain": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-codec-rubydebug": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-aggregate": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-anonymize": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-cidr": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-clone": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-filter-csv": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-date": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-filter-de_dot": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-dissect": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-dns": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-drop": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-filter-elasticsearch": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-example": {
@@ -128,20 +128,20 @@
     "skip-list": true
   },
   "logstash-filter-fingerprint": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-geoip": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-filter-grok": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-http": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-java_filter_example": {
@@ -157,12 +157,12 @@
     "skip-list": true
   },
   "logstash-filter-json": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-filter-kv": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-language": {
@@ -170,65 +170,65 @@
     "skip-list": true
   },
   "logstash-filter-memcached": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-metrics": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-mutate": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-filter-prune": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-ruby": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-filter-sleep": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-split": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-syslog_pri": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-throttle": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-translate": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-truncate": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-urldecode": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-useragent": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-uuid": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-filter-xml": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
@@ -237,20 +237,20 @@
     "skip-list": true
   },
   "logstash-input-azure_event_hubs": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-beats": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-input-couchdb_changes": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-dead_letter_queue": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-drupal_dblog": {
@@ -262,7 +262,7 @@
     "skip-list": true
   },
   "logstash-input-elasticsearch": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-example": {
@@ -270,32 +270,32 @@
     "skip-list": true
   },
   "logstash-input-exec": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-file": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-ganglia": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-gelf": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-generator": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-input-graphite": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-heartbeat": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-heroku": {
@@ -303,15 +303,15 @@
     "skip-list": true
   },
   "logstash-input-http": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-http_poller": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-imap": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-java_input_example": {
@@ -323,7 +323,7 @@
     "skip-list": true
   },
   "logstash-input-jms": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-journald": {
@@ -347,7 +347,7 @@
     "skip-list": true
   },
   "logstash-input-pipe": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-rabbitmq": {
@@ -359,7 +359,7 @@
     "skip-list": true
   },
   "logstash-input-redis": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-s3": {
@@ -367,11 +367,11 @@
     "skip-list": true
   },
   "logstash-input-snmp": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-snmptrap": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-sqs": {
@@ -379,33 +379,33 @@
     "skip-list": true
   },
   "logstash-input-stdin": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-input-syslog": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-tcp": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-input-twitter": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-udp": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-unix": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-integration-elastic_enterprise_search": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-integration-jdbc": {
@@ -413,15 +413,15 @@
     "skip-list": false
   },
   "logstash-integration-kafka": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-integration-rabbitmq": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-integration-aws": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-input-cloudwatch": {
@@ -433,7 +433,7 @@
     "skip-list": true
   },
   "logstash-output-csv": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-output-elastic_app_search": {
@@ -441,12 +441,12 @@
     "skip-list": true
   },
   "logstash-output-elasticsearch": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-output-email": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-output-example": {
@@ -454,7 +454,7 @@
     "skip-list": true
   },
   "logstash-output-file": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
@@ -463,11 +463,11 @@
     "skip-list": false
   },
   "logstash-output-graphite": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-output-http": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-output-java_output_example": {
@@ -483,11 +483,11 @@
     "skip-list": true
   },
   "logstash-output-lumberjack": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-output-nagios": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-output-neo4j": {
@@ -499,12 +499,12 @@
     "skip-list": true
   },
   "logstash-output-null": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-output-pipe": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-output-rabbitmq": {
@@ -516,7 +516,7 @@
     "skip-list": true
   },
   "logstash-output-redis": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-output-s3": {
@@ -536,20 +536,20 @@
     "skip-list": true
   },
   "logstash-output-stdout": {
-    "default-plugins": true,
+    "default-plugins": false,
     "core-specs": true,
     "skip-list": false
   },
   "logstash-output-tcp": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-output-udp": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   },
   "logstash-output-webhdfs": {
-    "default-plugins": true,
+    "default-plugins": false,
     "skip-list": false
   }
 }

@@ -22,16 +22,31 @@ module LogStash
     module Commands
       class WTF < Commands::Base
         def trace(plugin)
+          puts("ZZEM trace")
           # Dispatch to all instances of specified plugin (across all running pipelines)
           service.agent.running_pipelines.map do |pipeline_id, pipeline|
+            puts("ZZEM outputs; pipeline_id #{pipeline_id}")
             pipeline.outputs().each() do |output|
               if output.config_name == plugin
                 # If plugin doesn't implement wtf_handle_trace, overridden version is called
-                # XXX: pass trace msg to plugin's handler
+                # XXX: pass trace msg to plugin's handler (modify sig at same time to return stuff)
                 output.wtf_handle_trace
               end
             end
           end
+
+            # XXX get pipeline filters and inputs to dispatch to, from returned value of output trace handler
+          service.agent.running_pipelines.map do |pipeline_id, pipeline|
+            puts("ZZEM filters; pipeline_id #{pipeline_id}")
+            pipeline.filters().each() do |filter|
+              puts("ZZEM filter.config_name #{filter.config_name}")
+              if filter.config_name == "jdbc_streaming"
+                puts("ZZEM calling jdbc trace handler")
+                filter.wtf_handle_trace
+              end
+            end
+          end
+
           # TODO handle trace sent to input (i.e. forwards scoping)
 
           # Note: response will also include default metadata with a `pipeline` section.

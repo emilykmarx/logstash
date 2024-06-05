@@ -38,7 +38,7 @@ qa/.vagrant
 qa/acceptance/.vagrant
 qa/Gemfile.lock
 Gemfile.lock
-Gemfile
+# Don't ignore Gemfile -- need it for rmq and jdbc plugins, and local sequel (modifying Gemfile.template doesn't work)
 *.ipr
 *.iws
 *.iml
